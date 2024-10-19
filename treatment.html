@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayurvedic Treatments</title>
+    <style>
+        body {
+            background-color: white;
+            color: rgb(11, 45, 11);
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .section3 {
+            position: relative;
+            padding: 20px;
+        }
+
+        .weoff {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+        }
+
+        .weleft {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .weright {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        #scrollSection {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card {
+            position: relative;
+            height: 700px;
+            background-color: rgb(2, 18, 4);
+            width: 100%;
+            max-width: 430px;
+            border-radius: 20px 100px 20px 20px;
+            margin: 10px;
+            overflow: hidden;
+            transition: all 0.5s ease;
+        }
+
+        .card .image-container {
+            height: 60%;
+            width: 100%;
+            border-radius: 20px 100px 20px 20px;
+            overflow: hidden;
+        }
+
+        .card img {
+            height: 100%;
+            width: 100%;
+            border-radius: 20px 100px 0px 0px;
+            object-fit: cover;
+        }
+
+        .card h3 {
+            font-size: 35px;
+            text-align: center;
+            color: white; /* Title color set to white */
+        }
+
+        .card p {
+            text-align: center;
+            color: white; /* Description color set to white */
+        }
+
+        .discover-more {
+            color: rgb(175, 215, 179);
+            text-align: center;
+            font-size: larger;
+        }
+
+        .green-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgb(11, 45, 11); /* Green color */
+            transform: translateY(100%);
+            transition: transform 0.5s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px; /* Adjust font size for overlay */
+            opacity: 0.9; /* Slightly transparent overlay */
+            text-align: center;
+        }
+
+        .card:hover .green-overlay {
+            transform: translateY(0);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .weoff {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .weleft,
+            .weright {
+                padding: 10px;
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            .weleft h2 {
+                font-size: 50px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="section3">
+        <div class="weoff">
+            <div class="weleft">
+                <h1>OUR TREATMENT</h1>
+                <h2>Comprehensive Ayurveda <br>Treatment for Wellness</h2>
+            </div>
+            <div class="weright">
+                <p style = "font-family: 'Arial', sans-serif; ">We offer a wide range of Ayurvedic treatments designed to promote holistic healing and restore balance to your body and mind. Whether you're seeking detoxification, pain relief, or rejuvenation, our therapies are tailored to meet your individual needs and ensure lasting wellness.</p>
+                <b style="background-color: rgb(11, 45, 11); color: white; padding: 10px; border-radius: 30px; display: inline-block;">See more treatment</b>
+            </div>
+        </div>
+
+        <div id="scrollSection">
+            <div class="card">
+                <div class="image-container">
+                    <img src="p6.jpg" alt="Ayurvedic Detoxification Therapy">
+                </div>
+                <div style="padding: 20px;">
+                    <h3>Ayurvedic Detoxification Therapy</h3>
+                    <p>A natural method to cleanse the body of toxins and restore balance.</p>
+                    <p class="discover-more">Discover More</p>
+                </div>
+                <div class="green-overlay" style=" text-align: center;">This therapy focuses on removing accumulated toxins from the body using natural herbs and techniques. It rejuvenates the internal systems, promoting optimal health and vitality.</div>
+            </div>
+
+            <div class="card">
+                <div class="image-container">
+                    <img src="p7.png" alt="Stress Relief Therapy">
+                </div>
+                <div style="padding: 20px;">
+                    <h3>Stress Relief Therapy</h3>
+                    <p>Techniques to reduce stress and enhance relaxation for better mental clarity.</p>
+                    <p class="discover-more">Discover More</p>
+                </div>
+                <div class="green-overlay">A combination of relaxation techniques and Ayurvedic practices designed to reduce stress and anxiety levels. It helps restore mental clarity and emotional balance, fostering a sense of calm and well-being.</div>
+            </div>
+
+            <div class="card">
+                <div class="image-container">
+                    <img src="p8.png" alt="Joint and Muscle Pain Treatment">
+                </div>
+                <div style="padding: 20px;">
+                    <h3>Joint and Muscle Pain Treatment</h3>
+                    <p>Herbal remedies and physical therapies to relieve pain and improve mobility.</p>
+                    <p class="discover-more">Discover More</p>
+                </div>
+                <div class="green-overlay"> This treatment employs a blend of herbal remedies, massage, and physical therapies to alleviate pain and inflammation in the joints and muscles. It enhances flexibility and restores mobility, allowing for improved quality of life.</div>
+            </div>
+
+            <div class="card">
+                <div class="image-container">
+                    <img src="p9.png" alt="Rejuvenation Therapy">
+                </div>
+                <div style="padding: 20px;">
+                    <h3>Rejuvenation Therapy</h3>
+                    <p>Restorative treatments that revitalize the body and promote a youthful appearance.</p>
+                    <p class="discover-more">Discover More</p>
+                </div>
+                <div class="green-overlay"> A comprehensive treatment designed to restore energy and vitality to the body and mind. It combines nourishing herbal therapies with relaxation techniques to promote a youthful appearance and overall wellness.</div>
+            </div>
+
+            <div class="card">
+                <div class="image-container">
+                    <img src="p10.jpg" alt="Panchakarma Therapy">
+                </div>
+                <div style="padding: 20px;">
+                    <h3>Panchakarma Therapy</h3>
+                    <p> A five-step detox process to purify the body and restore overall health.</p>
+                    <p class="discover-more">Discover More</p>
+                </div>
+                <div class="green-overlay">A specialized detoxification process that involves five therapeutic treatments aimed at cleansing the body of impurities. This holistic approach restores balance and harmony, enhancing overall health and well-being.</div>
+            </div>
+
+            <div class="card">
+                <div class="image-container">
+                    <img src="p11.jpg" alt="Beauty Therapy">
+                </div>
+                <div style="padding: 20px;">
+                    <h3>Beauty Therapy</h3>
+                    <p>Natural treatments that enhance skin health and promote a radiant glow.</p>
+                    <p class="discover-more">Discover More</p>
+                </div>
+                <div class="green-overlay"> This therapy utilizes Ayurvedic principles to enhance skin health and radiance. It incorporates natural treatments and herbal formulations to rejuvenate the skin, promoting a youthful glow and overall beauty.</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('scroll', function () {
+            var scrollSection = document.getElementById('scrollSection');
+            var rect = scrollSection.getBoundingClientRect();
+
+            // Trigger the effect when the section is visible in the viewport
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+                scrollSection.style.opacity = '1';
+                scrollSection.style.transform = 'translateY(0)';
+            }
+        });
+    </script>
+</body>
+
+</html>

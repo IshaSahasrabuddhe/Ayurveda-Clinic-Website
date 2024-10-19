@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Product Detail</title>
+    <style>
+        .carousel-inner img {
+            width: 100%;
+            height: auto; /* Adjusts the height based on the image aspect ratio */
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 id="productName"></h1>
+        <div id="productCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner"></div>
+            <a class="carousel-control-prev" href="#productCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#productCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+        <p id="shortDescription" class="mt-3"></p>
+        <p id="productDescription" class="mt-3"></p>
+        <h3 id="productPrice" class="mt-2"></h3>
+        <p id="stockStatus" class="mt-2"></p>
+        <p id="productWeight" class="mt-2"></p>
+        <div id="productRating" class="mt-2"></div>
+        <div id="reviewsCount" class="mt-2"></div>
+
+        <h5>Customer Reviews:</h5>
+        <ul id="customerReviews"></ul>
+
+        <!-- Review submission form -->
+        <div class="mt-4">
+            <h5>Leave a Review:</h5>
+            <textarea id="reviewText" class="form-control" rows="3" placeholder="Write your review here..."></textarea>
+            <button id="submitReview" class="btn btn-primary mt-2">Submit Review</button>
+        </div>
+
+        <div class="mt-3">
+            <button id="addToCart" class="btn btn-primary">Add to Cart</button>
+            <button id="buyNow" class="btn btn-success">Buy Now</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Assuming the URL has a query parameter ?id=2
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id');
+
+        fetch('products.json')
+            .then(response => response.json())
+            .then(products => {
+                const product = products.find(p => p.id == productId);
+                if (product) {
+                    // Populate carousel
+                    const carouselInner = document.querySelector('.carousel-inner');
+                    product.images.forEach((image, index) => {
+                        const carouselItem = document.createElement('div');
+                        carouselItem.classList.add('carousel-item');
+                        if (index === 0) {
+                            carouselItem.classList.add('active');
+                        }
+                        carouselItem.innerHTML = `<img src="${image}" class="d-block" alt="Product Image ${index + 1}">`;
+                        carouselInner.appendChild(carouselItem);
+                    });
+
+                    // Populate other product details
+                    document.getElementById('productName').innerText = product.name;
+                    document.getElementById('shortDescription').innerText = product.short_description;
+                    document.getElementById('productDescription').innerText = product.full_description;
+                    document.getElementById('productPrice').innerText = `$${product.price.toFixed(2)}`;
+                    document.getElementById('stockStatus').innerText = product.stock === 0 ? "Sold Out" : "In Stock";
+                    document.getElementById('productWeight').innerText = `Weight: ${product.weight}`;
+                    document.getElementById('productRating').innerHTML = `Rating: ${product.rating} ⭐`;
+                    document.getElementById('reviewsCount').innerText = `${product.reviews_count} reviews`;
+
+                    // Populate customer reviews
+                    const customerReviews = document.getElementById('customerReviews');
+                    product.reviews.forEach(review => {
+                        const listItem = document.createElement('li');
+                        listItem.innerText = review;
+                        customerReviews.appendChild(listItem);
+                    });
+
+                    // Add to cart and buy now button functionality
+                    document.getElementById('addToCart').addEventListener('click', () => {
+                        alert('Product added to cart!');
+                        // Add logic to add product to cart
+                    });
+
+                    document.getElementById('buyNow').addEventListener('click', () => {
+                        alert('Proceeding to checkout!');
+                        // Add logic to redirect to checkout page
+                    });
+
+                    // Submit review functionality
+                    document.getElementById('submitReview').addEventListener('click', () => {
+                        const reviewText = document.getElementById('reviewText').value;
+                        if (reviewText) {
+                            const listItem = document.createElement('li');
+                            listItem.innerText = reviewText;
+                            customerReviews.appendChild(listItem);
+                            document.getElementById('reviewText').value = ''; // Clear the textarea
+                            alert('Thank you for your review!');
+                        } else {
+                            alert('Please write a review before submitting.');
+                        }
+                    });
+                }
+            });
+    </script>
+</body>
+</html>

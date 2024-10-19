@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Up Animation</title>
+    <style>
+        .cards {
+            padding-left: 100px;
+            padding-right: 100px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .spacer {
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="spacer"></div>
+    <div class="spacer"></div>
+    
+    <div class="cards" id="cardsSection" style="display: flex; flex-wrap: wrap;">
+        <div id="leftcol">
+            <div class="card" style="
+                display: flex;
+                height: 400px;
+                background-color: white;
+                width: 600px;
+                border-radius: 20px 20px 100px 20px;
+                margin: 20px;
+                opacity: 0;
+                transform: translateY(100%);
+                transition: opacity 1s ease-out, transform 1s ease-out;
+            ">
+                <div style="width: 45%; height: 100%;">
+                    <img src="lf.jpg" alt="" style="width: 100%; height: 100%; border-radius: 20px 100px 20px 10px;">
+                </div>
+                <div style="width: 55%; padding-left: 50px; padding-top: 50px; padding-right: 10px;">
+                    <img src="1.png" alt="">
+                    <p style="font-size: 20px; padding-top: 20px;">Discover yoga the greatest form of relaxation and mental well-being.</p>
+                    <p style="color: rgb(65, 65, 137);">Discover More</p>
+                </div>
+            </div>
+
+            <div class="card" style="
+                display: flex;
+                height: 400px;
+                background-color: white;
+                width: 600px;
+                border-radius: 20px 20px 100px 20px;
+                margin: 20px;
+                opacity: 0;
+                transform: translateY(100%);
+                transition: opacity 1s ease-out, transform 1s ease-out;
+            ">
+                <div style="width: 50%; height: 100%;">
+                    <img src="lf.jpg" alt="" style="width: 100%; height: 100%; border-radius: 20px 100px 20px 10px;">
+                </div>
+                <div style="width: 50%; padding-left: 50px; padding-top: 50px; padding-right: 10px;">
+                    <img src="1.png" alt="">
+                    <p style="font-size: 20px; padding-top: 20px;">Discover yoga the greatest form of relaxation and mental well-being.</p>
+                    <p style="color: rgb(65, 65, 137);">Discover More</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="rightcol">
+            <div class="card" style="
+                display: flex;
+                height: 400px;
+                background-color: white;
+                width: 600px;
+                border-radius: 20px 20px 100px 20px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                opacity: 0;
+                transform: translateY(100%);
+                transition: opacity 1s ease-out, transform 1s ease-out;
+            ">
+                <div style="width: 45%; height: 100%;">
+                    <img src="lf.jpg" alt="" style="width: 100%; height: 100%; border-radius: 20px 100px 20px 10px;">
+                </div>
+                <div style="width: 55%; padding-left: 50px; padding-top: 50px; padding-right: 10px;">
+                    <img src="1.png" alt="">
+                    <p style="font-size: 20px; padding-top: 20px;">Discover yoga the greatest form of relaxation and mental well-being.</p>
+                    <p style="color: rgb(65, 65, 137);">Discover More</p>
+                </div>
+            </div>
+
+            <div class="card" style="
+                display: flex;
+                height: 400px;
+                background-color: white;
+                width: 600px;
+                border-radius: 20px 20px 100px 20px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                opacity: 0;
+                transform: translateY(100%);
+                transition: opacity 1s ease-out, transform 1s ease-out;
+            ">
+                <div style="width: 45%; height: 100%;">
+                    <img src="lf.jpg" alt="" style="width: 100%; height: 100%; border-radius: 20px 100px 20px 10px;">
+                </div>
+                <div style="width: 55%; padding-left: 50px; padding-top: 50px; padding-right: 10px;">
+                    <img src="1.png" alt="">
+                    <p style="font-size: 20px; padding-top: 20px;">Discover yoga the greatest form of relaxation and mental well-being.</p>
+                    <p style="color: rgb(65, 65, 137);">Discover More</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('scroll', function() {
+            const cardsSection = document.getElementById('cardsSection');
+            const cardsRect = cardsSection.getBoundingClientRect();
+            
+            // Check if the section is in view
+            if (cardsRect.top < window.innerHeight && cardsRect.bottom >= 0) {
+                const cards = document.querySelectorAll('.card');
+                cards.forEach(card => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                });
+            }
+        });
+    </script>
+
+
+
+<div class="spacer"></div>
+<div class="spacer"></div>
+<div class="spacer"></div>
+
+<div class="section3">
+    <div class="weoff" style="display: flex;">
+        <div class="weleft" style="width: 60%; padding-left: 200px; padding-top: 100px; padding-bottom: 50px;">
+            <h1 style="font-family: Georgia, 'Times New Roman', Times, serif; font-size: 20px; font-weight: 500;">OUR TREATMENT</h1>
+            <h2 style="font-family: 'Times New Roman', Times, serif; font-size: 70px;">Comprehensive Ayurveda <br>Treatment for Wellness</h2>
+        </div>
+        <div class="weright" style="width: 40%; padding-top: 100px; padding-right: 100px;">
+            <p style="padding-bottom: 50px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae dicta ducimus necessitatibus cumque cupiditate impedit. Iste repellendus porro nostrum deleniti!</p>
+            <b style="background-color: rgb(11, 45, 11); color: white; padding: 10px; border-radius: 30px;"> See more treatment </b>
+        </div>
+    </div>
+
+    <div id="scrollSection" style="
+        padding-right: 200px; 
+        padding-left: 200px; 
+        padding-bottom: 100px; 
+        color: white; 
+        display: flex;
+        opacity: 0; 
+        transform: translateY(100%);
+        transition: opacity 1s ease-out, transform 1s ease-out;
+    ">
+        <div style="
+            height: 700px; 
+            background-color: rgb(2, 18, 4); 
+            width: 430px; 
+            border-radius: 20px 100px 20px 20px; 
+            margin-top: 20px; 
+            margin-bottom: 20px; 
+            margin-right: 10px;
+        ">
+            <div style="
+                height: 60%; 
+                width: 430px;
+                border-radius: 20px 100px 20px 20px;
+            ">
+                <img src="lf.jpg" style="
+                    height: 100%; 
+                    width: 100%; 
+                    border-radius: 20px 100px 0px 0px;
+                ">
+            </div>
+            <div style="
+                padding-top: 50px; 
+                padding-left: 30px; 
+                padding-right: 30px;
+            ">
+                <h3 style="
+                    font-size: 35px; 
+                    font-family: 'Times New Roman', Times, serif;  
+                    display: flex; 
+                    justify-content: center; 
+                    text-align: center;
+                ">Ayurvedic Detoxification Therapy</h3>
+                <p style="text-align: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, eaque.</p>
+                <p style="color: rgb(175, 215, 179); text-align: center; font-size: larger;">Discover More</p>
+            </div>
+        </div>
+        <!-- Repeat for additional cards with similar inline styling -->
+    </div>
+</div>
+
+<script>
+    window.addEventListener('scroll', function() {
+        var scrollSection = document.getElementById('scrollSection');
+        var rect = scrollSection.getBoundingClientRect();
+        
+        // Check if the section is in view
+        if (rect.top < window.innerHeight && rect.bottom >= 0) {
+            scrollSection.style.opacity = '1';
+            scrollSection.style.transform = 'translateY(0)';
+        }
+    });
+</script>
+
+
+
+
+<div class="spacer"></div>
+<div class="spacer"></div>
+
+<div class="section3" style="background-color: white; color: rgb(11, 45, 11);">
+    <div class="weoff" style="display: flex;">
+        <div class="weleft" style="width: 60%; padding-left: 200px; padding-top: 100px; padding-bottom: 50px;">
+            <h1 style="font-family: Georgia, 'Times New Roman', Times, serif; font-size: 20px; font-weight: 500;">OUR TREATMENT</h1>
+            <h2 style="font-family: 'Times New Roman', Times, serif; font-size: 70px;">Comprehensive Ayurveda <br>Treatment for Wellness</h2>
+        </div>
+        <div class="weright" style="width: 40%; padding-top: 100px; padding-right: 100px;">
+            <p style="padding-bottom: 50px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae dicta ducimus necessitatibus cumque cupiditate impedit. Iste repellendus porro nostrum deleniti!</p>
+            <b style="background-color: rgb(11, 45, 11); color: white; padding: 10px; border-radius: 30px;"> See more treatment </b>
+        </div>
+    </div>
+
+    <div id="wcd" style="padding-right: 200px; padding-left: 200px; padding-bottom: 100px; color: white; display: flex; opacity: 0; transform: translateY(100%); transition: opacity 1s ease-out, transform 1s ease-out;">
+        <div style="height: 700px; background-color: rgb(2, 18, 4); width: 430px; border-radius: 20px 100px 20px 20px; margin-top: 20px; margin-bottom: 20px; margin-right: 10px;">
+            <div style="height: 60%; width: 430px; border-radius: 20px 100px 20px 20px;">
+                <img src="lf.jpg" style="height: 100%; width: 100%; border-radius: 20px 100px 0px 0px;">
+            </div>
+            <div style="padding-top: 50px; padding-left: 30px; padding-right: 30px;">
+                <h3 style="font-size: 35px; font-family: 'Times New Roman', Times, serif; display: flex; justify-content: center; text-align: center;">Ayurvedic Detoxification Therapy</h3>
+                <p style="text-align: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, eaque.</p>
+                <p style="color: rgb(175, 215, 179); text-align: center; font-size: larger;">Discover More</p>
+            </div>
+        </div>
+        <!-- Repeat the above block for additional cards -->
+    </div>
+</div>
+
+<script>
+    window.addEventListener('scroll', function() {
+        var wcdSection = document.getElementById('wcd');
+        var rect = wcdSection.getBoundingClientRect();
+        
+        // Check if the top of the section is within the viewport
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+            wcdSection.style.opacity = '1';
+            wcdSection.style.transform = 'translateY(0)';
+        }
+    });
+</script>
+
+
+<div class="spacer"></div>
+    <div class="spacer"></div>
+    <div class="spacer"></div>
+
+    <div class="section3">
+        <div class="weoff" style="display: flex;">
+            <div class="weleft" style="width: 60%; padding-left: 200px; padding-top: 100px; padding-bottom: 50px;">
+                <h1 style="font-family: Georgia, 'Times New Roman', Times, serif; font-size: 20px; font-weight: 500;">OUR TREATMENT</h1>
+                <h2 style="font-family: 'Times New Roman', Times, serif; font-size: 70px;">Comprehensive Ayurveda <br>Treatment for Wellness</h2>
+            </div>
+            <div class="weright" style="width: 40%; padding-top: 100px; padding-right: 100px;">
+                <p style="padding-bottom: 50px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae dicta ducimus necessitatibus cumque cupiditate impedit. Iste repellendus porro nostrum deleniti!</p>
+                <b style="background-color: rgb(11, 45, 11); color: white; padding: 10px; border-radius: 30px;"> See more treatment </b>
+            </div>
+        </div>
+
+        <div id="scrollSection" style="
+            padding-right: 200px; 
+            padding-left: 200px; 
+            padding-bottom: 100px; 
+            color: white; 
+            display: flex;
+            opacity: 0; 
+            transform: translateY(50px); /* Start slightly off-screen */
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        ">
+            <div style="
+                height: 700px; 
+                background-color: rgb(2, 18, 4); 
+                width: 430px; 
+                border-radius: 20px 100px 20px 20px; 
+                margin-top: 20px; 
+                margin-bottom: 20px; 
+                margin-right: 10px;
+            ">
+                <div style="
+                    height: 60%; 
+                    width: 430px;
+                    border-radius: 20px 100px 20px 20px;
+                ">
+                    <img src="lf.jpg" style="
+                        height: 100%; 
+                        width: 100%; 
+                        border-radius: 20px 100px 0px 0px;
+                    ">
+                </div>
+                <div style="
+                    padding-top: 50px; 
+                    padding-left: 30px; 
+                    padding-right: 30px;
+                ">
+                    <h3 style="
+                        font-size: 35px; 
+                        font-family: 'Times New Roman', Times, serif;  
+                        display: flex; 
+                        justify-content: center; 
+                        text-align: center;
+                    ">Ayurvedic Detoxification Therapy</h3>
+                    <p style="text-align: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, eaque.</p>
+                    <p style="color: rgb(175, 215, 179); text-align: center; font-size: larger;">Discover More</p>
+                </div>
+            </div>
+            <!-- Repeat for additional cards with similar inline styling -->
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            var scrollSection = document.getElementById('scrollSection');
+            var rect = scrollSection.getBoundingClientRect();
+            
+            // Trigger the effect when the section is visible in the viewport
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+                scrollSection.style.opacity = '1';
+                scrollSection.style.transform = 'translateY(0)';
+            }
+        });
+    </script>
+</body>
+</html>

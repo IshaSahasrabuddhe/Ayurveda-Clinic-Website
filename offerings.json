@@ -1,0 +1,34 @@
+[
+  {
+    "id": "shirodhara",
+    "title": "Shirodhara Therapy",
+    "images": ["t/1.jpg", "t/2.jpg", "t/3.jpg"],
+    "short_description": "Experience the soothing and calming effects of Shirodhara.",
+    "long_description": "Shirodhara is an ancient Ayurvedic therapy that involves the continuous pouring of warm herbal oil onto the forehead, specifically onto the 'third eye' area. This gentle and rhythmic flow of oil not only promotes deep relaxation but also calms the mind, making it an effective treatment for anxiety and stress. It works by soothing the nervous system, enhancing mental clarity, and balancing emotions. Many individuals report experiencing profound states of peace and tranquility during and after the session, making Shirodhara a cherished practice for those seeking mental and emotional rejuvenation.",
+    "welcome_message": "We warmly welcome you to the tranquil experience of Shirodhara Therapy."
+  },
+  {
+    "id": "udvartana",
+    "title": "Udvartana Herbal Scrub",
+    "images": ["t/5.jpg", "t/4.jpg", "t/6.jpg"],
+    "short_description": "Udvartana offers rejuvenation and vitality through herbal scrubs.",
+    "long_description": "Udvartana is a revitalizing Ayurvedic treatment that employs a unique blend of herbal powders to perform a vigorous scrub and massage on the body. This therapeutic technique not only exfoliates the skin but also stimulates circulation, helping to detoxify the body and enhance its metabolic processes. The herbs used in Udvartana are chosen based on individual needs, and they work synergistically to promote a feeling of lightness and vitality. The treatment is particularly beneficial for individuals looking to lose weight or improve their skin texture, leaving them with a refreshed and rejuvenated sense of well-being.",
+    "welcome_message": "Welcome to the revitalizing experience of Udvartana Herbal Scrub."
+  },
+  {
+    "id": "pranayama",
+    "title": "Pranayama Breathing Techniques",
+    "images": ["t/7.jpg", "t/8.jpg", "t/9.jpeg"],
+    "short_description": "Enhance your life energy with Pranayama breathing exercises.",
+    "long_description": "Pranayama, the art of breath control, is a foundational practice in yoga that emphasizes the importance of conscious breathing to enhance physical vitality and mental clarity. By practicing various techniques of Pranayama, individuals learn to regulate their breath, which in turn helps to calm the mind, reduce stress levels, and increase energy. This practice promotes a deeper connection between the body and mind, encouraging mindfulness and a greater sense of inner peace. Regular engagement in Pranayama can lead to improved lung capacity, better oxygenation of the body, and overall enhancement of well-being, making it an essential practice for holistic health.",
+    "welcome_message": "Join us in exploring the life-changing benefits of Pranayama."
+  },
+  {
+    "id": "dietary_guidance",
+    "title": "Ayurvedic Dietary Guidance",
+    "images": ["t/10.jpg", "t/11.jpg", "t/12.jpg"],
+    "short_description": "Discover personalized dietary guidance based on Ayurvedic principles.",
+    "long_description": "Ayurvedic Dietary Guidance provides individuals with personalized recommendations based on their unique constitution (dosha) and lifestyle. The foundation of Ayurveda is that food is not just a source of nourishment but also medicine for the body and mind. By understanding the qualities of different foods and how they affect the body, individuals can make informed choices that promote balance and health. This guidance takes into account seasonal changes, digestive capacity, and personal health goals, ensuring that every meal serves as a step towards improved well-being. Through tailored dietary practices, individuals can enhance their energy levels, support digestion, and achieve optimal health.",
+    "welcome_message": "We welcome you to embark on a journey of health through Ayurvedic Dietary Guidance."
+  }
+]
